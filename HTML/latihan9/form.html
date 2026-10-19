@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Form</title>
+</head>
+<body>
+
+	<form>
+		<!-- input text-->
+		<label for="username">username : </label>
+		<input type="text" id="username">
+		<!-- id di input harus sama dengan for di label -->
+			<br>
+		<label for="password">password : </label>
+		<input type="password" id="password">
+			<br>
+
+		<!-- input radio (memilih salah satu) -->
+		<input type="radio" id="perempuan" name="jeniskelamin"><label for="Perempuan">Perempuan</label>
+		<input type="radio" id="pria" name="jeniskelamin"><label for="pria">Pria</label>
+		<!-- atribut 'name' digunakan sebegai pengelompokkan. seperti pemilihan jenis kelamin di atas, kalau tidak menggunakan attribut name makan kedua jenis kelamin bisa dipilih bersamaan, padahal itu tidak boleh -->
+			<br>
+
+		<!-- input checkbox, bisa memilih lebih dari satu -->
+		<input type="checkbox" id="menyanyi"><label for="menyanyi">menyanyi</label>
+		<input type="checkbox" id="olahraga"><label for="olahraga">olahraga</label>
+		<input type="checkbox" id="ngoding"><label for="ngoding">ngoding</label>
+			<br>
+
+		<!-- textarea = bisa menulisa banyak seperti artikel -->
+
+		<textarea></textarea>
+			<br>
+
+		<!-- combo box, pilihan dengan dropdown -->
+		<select>
+			<option>Jakarta</option>
+			<option>Bandung</option>
+			<option>Semarang</option>
+		</select>
+
+			<br>
+
+		<!-- tombol -->
+			<!-- submit untuk mengirim data. tapi disarankan menggunakan tag input untuk tombol -->
+		<!-- <input type="submit" value="kirim"> -->
+
+		<button type="submit">Kirim</button>
+			<br>
+
+	</form>
+
+</body>
+</html>

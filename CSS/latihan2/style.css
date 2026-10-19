@@ -1,0 +1,14 @@
+h1 {
+	font-family: arial, verdana, sans-serif;
+	font-size: 100px;
+	font-variant: small-caps;
+	/*font-style: italic; Ini jika family font yang digunakan ada yang italic*/
+	/*font-style: oblique; jika tidak ada sistem yang pkasa miringkan*/
+
+
+}
+
+p {
+	font-family: georgia, serif;
+	line-height: 50px;
+}

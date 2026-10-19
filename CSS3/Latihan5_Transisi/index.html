@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transisi</title>
+
+    <style>
+        
+        .container1 {
+            width: 500px;
+            background-color: peru;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px 0;
+        }
+
+        .kotak1 {
+            background-color: darkcyan;
+            transition: 3s ease; /*Default*/
+        }
+
+        .kotak2 {
+            background-color: darkgreen;
+            transition: 3s ease-in;
+        }
+
+        .kotak3 {
+            background-color: darkmagenta;
+            transition: 3s ease-out;
+        }
+
+        .kotak4 {
+            background-color: deeppink;
+            transition: 3s ease-in-out;
+        }
+
+        .kotak5 {
+            background-color: darkturquoise;
+            transition: 3s linear;
+        }
+
+        .container1:hover .kotak {
+            transform: rotate(720deg);
+            margin-left: 400px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container1">
+        <div class="kotak kotak1">Ease</div>
+        <div class="kotak kotak2">Ease-in</div>
+        <div class="kotak kotak3">Ease-out</div>
+        <div class="kotak kotak4">Ease-in-out</div>
+        <div class="kotak kotak5">Linear</div>
+    </div>
+</body>
+</html>

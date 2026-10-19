@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            margin-bottom: 30px;
+        }
+
+        .satu {
+            border-radius: 50%;
+            background-color: crimson;
+        }
+
+        .dua {
+            border-top-left-radius: 50%;
+            background-color: darkblue;
+        }
+
+        .tiga {
+            border-top-right-radius: 50%;
+            background-color: darkmagenta;
+        }
+
+        .empat {
+            border-bottom-left-radius: 50%;
+            background-color: darkorange;
+        }
+
+        .lima {
+            border-bottom-right-radius: 50%;
+            background-color: darkgreen;
+        }
+
+        .enam {
+            border-radius: 0 50% 0 50%;
+            background-color: darkcyan;
+        }
+
+        .tujuh {
+            border-radius: 0 50% 50% 50%;
+            background-image: url(foto_difa.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: palevioletred;
+        }
+
+        .delapan {
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: palevioletred;
+        }
+        
+        .delapan img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="satu">Border-radius 50%</div>
+    <div class="dua">border-top-left-radius 50%</div>
+    <div class="tiga">border-top-right-radius 50%</div>
+    <div class="empat">border-bottom-left-radius 50%</div>
+    <div class="lima">border-bottom-right-radius 50%</div>
+    <div class="enam">border radius 0 50% 0 50%</div>
+    <div class="tujuh"></div>
+    <div class="delapan">
+        <img src="foto_difa.png" alt="">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+DOM (Document Object Model)
+Dalam browser, website yang ditampilkan itu adalah document html. Jadi elemen-elemen html yang tampil di halaman web adalah bagian dari document.
+Object pada DOM ini adalah object javascript.
+DOM membuat website menjadi lebih dinamis.
+pada DOM ada yang namanya tree.
+
+nodelist = kumupulan node mau itu element ataupun non element
+htmlcollection = kumpulan node yang semua element
