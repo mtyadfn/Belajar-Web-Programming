@@ -1,4 +1,0 @@
-Semantic HTML
-accessibility
-Maintainability
-SEO

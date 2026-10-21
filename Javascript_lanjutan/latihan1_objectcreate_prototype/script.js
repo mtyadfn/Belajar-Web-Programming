@@ -21,16 +21,16 @@
 // };
 
 // method makan dan main pindah ke object baru. object ini hanya disimpan satu kali dalam memori
-const methodMahasiswa = {
-    makan: function(porsi){
-        this.energi += porsi;
-        console.log(`halo ${this.nama}, selamat makan`);
-    },
-    main: function(jam){
-        this.energi -= jam;
-        console.log(`halo ${this.nama}, selamat bermain`);
-    }
-};
+// const methodMahasiswa = {
+//     makan: function(porsi){
+//         this.energi += porsi;
+//         console.log(`halo ${this.nama}, selamat makan`);
+//     },
+//     main: function(jam){
+//         this.energi -= jam;
+//         console.log(`halo ${this.nama}, selamat bermain`);
+//     }
+// };
 
 // object pertama setelah method-method dikeluarkan. methodnya cukup di jalankan sekali di dalam object method di atas. jadi setiap inisiasi mahasiswa baru, tidak ada method yang akan disimpandalam memory baru.
 // function Mahasiswa(nama, energi){
@@ -46,14 +46,72 @@ const methodMahasiswa = {
 // setiap ada method baru, sebelum masuk ke object utama, harus didaftarin ke object method dulu. akan sulit jika akan menambahkan banyak method atau menghapus method.
 
 // Ada cara otomatis untuk menambahkan method baru, tanpa mendaftarkan ke object method. dan method tadi bisa dihapus. Untuk menggantinya menggunakan Object.create(). Nantinya tidap perlu mendefinisikan method ke dalam object utama.
-function Mahasiswa(nama, energi){
-    let mahasiswa = Object.create(methodMahasiswa);
-    mahasiswa.nama = nama;
-    mahasiswa.energi = energi;
+
+// Object.create()
+// function Mahasiswa(nama, energi){
+//     let mahasiswa = Object.create(methodMahasiswa);
+//     mahasiswa.nama = nama;
+//     mahasiswa.energi = energi;
 
 
 
-    return mahasiswa
-};
+//     return mahasiswa
+// };
 
-const difa = Mahasiswa('Difa', 20);
+
+// Menggunakan prototype menjadi lebih efektif
+// constructor function
+// function Mahasiswa(nama, energi){
+//     this.nama = nama;
+//     this.energi = energi;
+// };
+
+// // menggunakan prototype tidak perlu membuat object baru untuk menyimpan method
+
+// Mahasiswa.prototype.makan = function(porsi){
+//     this.energi += porsi;
+//     return `halo ${this.nama}, selamat makan!`;
+// }
+
+// Mahasiswa.prototype.main = function(jam){
+//     this.energi -= jam;
+//     return `halo ${this.nama}, selamat main!`;
+    
+// }
+
+// Mahasiswa.prototype.tidur = function(jam){
+//     this.energi += jam;
+//     return `halo ${this.nama}, selamat tidur!`;
+    
+// }
+
+
+// mirip seperti membuat class
+
+class Mahasiswa {
+    constructor(nama, energi){
+        this.nama = nama;
+        this.energi = energi;
+    }
+
+    // method-methodnya
+    makan(porsi){
+        this.energi += porsi;
+        return `halo ${this.nama}, selamat makan!`;
+    }
+
+    main(jam){
+        this.energi -= jam;
+        return `halo ${this.nama}, selamat main!`;
+        
+    }
+
+    tidur(jam){
+        this.energi += jam;
+        return `halo ${this.nama}, selamat tidur!`;
+        
+    }
+
+}
+
+let difa = new Mahasiswa('Difa', 30);

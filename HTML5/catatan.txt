@@ -1,0 +1,22 @@
+Semantic HTML :
+accessibility
+Maintainability
+SEO
+
+Images Elements :
+1. <img> : 
+    - src
+    - alt
+    - width & height
+    - title
+    - srcset (untu membuat halaman web responsive)
+    - sizes (untuk mengatur ukuran gambar yang berbeda berdasarkan 'media condition')
+    - loading (menentukan bagaimana gambar di load oleh browser)
+
+2. <figure></figure> -> merepresentasikan konten yang berdiri sendiri tanpa mempengaruhi flow halaman. gambar yang bisa memiliki caption <figcaption>
+<figure>
+    <img>
+    <figcaption></figcaption>
+</figure>
+
+3. <picture></picture> -> bertujuan untuk mengoptimasi halaman agar menghemat bandwidth dan mempercepat load time. bisa digunakan juga sebagai art direction, untuk menapilkan gambar yang berbeda pada display/device yang berbeda
