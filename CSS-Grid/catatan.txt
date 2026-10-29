@@ -1,0 +1,26 @@
+https://github.com/sandhikagalih/belajar-css-grid
+
+grid container : element pembungkus grid. didefinisikan dengan => display: grid;
+
+grid item : element-element yang berada 1 level di bawah grid pembungkus (di dalamnya)
+
+grid line : garis horizontal (kolom) atau vertikal (baris) yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka. jumlah line pasti lebih satu dari jumlah kolom atau barisnya
+
+grid cell : perpotongan/pertemuan antara baris dan kolom di dalam grid
+
+grid area : kumpulan lebih dari satu grid cell yang membentuk kotak
+
+grid track : ukuran/ jarak (cell) antara 2 grid line, bisa horizontal (kolom) atau vertikal(baris)
+
+grid gap : jarak antar grid track/cell
+
+
+- Special keywords & functions -
+1. repeat() : menentukan ukuran grid track secara berulang
+
+2. min-content & max-content : menentukan seberapa besar ukuran grid track berdasarkan content pada sebuah item.
+dua keywords ini digunakan di grid-template-colums atau rows. min-content -> perkata, dan akan dicari kata yang paling panjang sedangkan max-content -> sepanjang isi
+
+3. auto-fill & auto-fit : menentukan jumlah item untuk berada pada grid track. biasanya digunakan pada nilai repeat()
+
+4. minmax() : menentukan ukuran minimal dan maksimal dari grid track. berada di gtc

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+
+    <style>
+        a {
+            color: inherit;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Halo</h1>
+
+
+    <a href="" onclick="gantiNama()">Ganti Nama</a>
+
+    <a href="" onclick="hapusNama()">Hapus Nama</a>
+
+    <a href="" class="toggle">Dark Mode</a>
+
+    <a href="" onclick="hapusStorage()">Hapus Storage</a>
+
+
+
+    <script>
+        const judul = document.querySelector('h1');
+
+        // local storage
+        let nama = localStorage.getItem('nama');
+        // menanyakan apakah ada nama di dalam local storage, jika ada pakai nama itu, jika tidak buat nama baru
+        if(!nama){
+            nama = prompt('Masukan Nama :');
+            localStorage.setItem('nama', nama);
+        }
+        // jika sudah tersimpan namanya pada local storage, jika halaman di putar ulang, nama tersebut tetep ada
+
+        judul.innerHTML = `Halo, ${nama}`;
+
+
+        // Ganti nama
+        const gantiNama = (e) => {
+            nama = prompt('Masukan Nama Baru :');
+            localStorage.setItem('nama', nama);
+            e.preventDefault();
+        }
+
+
+        // Hapus nama
+        const hapusNama = (e) => {
+            localStorage.removeItem('nama');
+            e.preventDefault();
+        }
+
+        // mengubah tema
+        const toggle = document.querySelector('.toggle')
+
+        let tema = localStorage.getItem('tema');
+
+        if(!tema) {
+            localStorage.setItem('tema','light');
+        }
+
+        const darkMode = () => {
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML = 'Light Mode';
+            localStorage.setItem('tema', 'dark');
+        }
+
+        const lightMode = () => {
+            document.body.classList.remove('dark-mode');
+            toggle.innerHTML = 'Dark Mode';
+            localStorage.setItem('tema', 'light');
+        }
+
+        if(tema === 'dark'){
+            darkMode();
+        }
+
+        toggle.addEventListener('click', function(e){
+
+            tema = localStorage.getItem('tema');
+            if(tema === 'light'){
+                darkMode();
+            } else {
+                lightMode();
+            }
+
+            e.preventDefault();
+        });
+        
+
+        // Hapus Storage
+        const hapusStorage = (e) => {
+            localStorage.clear();
+            e.preventDefault();
+        }
+
+
+
+        // Session storage
+        // let nama = sessionStorage.getItem('nama');
+        // if(!nama){
+        //     nama = prompt('Masukan Nama :');
+        //     sessionStorage.setItem('nama', nama);
+        // }
+        // judul.innerHTML = `Halo, ${nama}`;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        html, body {
+            /* border: 2px orangered solid; */
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr minmax(100px,500px) 1fr;
+            /* grid-template-columns: repeat(4, 2fr);  */
+            /* artinya (4, 2fr) -> buatkan 4 kolom dengan lebar 2fr */
+            /* grid-template-columns: repeat(2, 2fr) repeat(3, 1.5fr); */
+            /* grid-template-columns: 1fr max-content 1fr; */
+            /* grid-template-columns: 1fr min-content 1fr; */
+            /* auto-fill  -> jika jumlah item lebih sedikit dari lebar container*/
+            /* grid-template-columns: repeat(auto-fill, 100px); */
+
+            /* auto-fit garis solid paling kanan ada di item terakhir*/
+            /* grid-template-columns: repeat(auto-fit, 100px); */
+
+
+        }
+
+        .item {
+            background-color: seagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item:nth-child(even) {
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">mutiyaaaa</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+    </div>
+</body>
+</html>

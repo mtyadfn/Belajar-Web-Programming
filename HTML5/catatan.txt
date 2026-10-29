@@ -20,3 +20,50 @@ Images Elements :
 </figure>
 
 3. <picture></picture> -> bertujuan untuk mengoptimasi halaman agar menghemat bandwidth dan mempercepat load time. bisa digunakan juga sebagai art direction, untuk menapilkan gambar yang berbeda pada display/device yang berbeda
+
+Audio 
+<audio></audio> : digunakan untuk menjalankan file audi
+    - src
+    - controls
+    - preload
+    - autoplay
+    - loop
+    - muted
+
+Video
+<video></video> :
+    - src
+    - controls
+    - poster
+    - preload
+    - autoplay
+    - loop
+    - muted
+    - width
+    - height
+
+Track
+<track></track>
+    - src
+    - kind : jenis track
+    - title
+    - srclang
+
+Canvas -> digunakan untuk menggambar grfis menggunakan js
+<canvas></canvas>
+    - width
+    - height
+
+SVG (Scalable Vector Graphics) Grafik yang berbentuk vektor yang bisa diskalakan. vector memiliki besaran dan arah
+<svg></svg>
+
+Form Validattion
+Attribute :
+autocomplete : melakukan otomatis pengisian dengan isi yang pernah ada
+autofocus : ketika halaman dibuka lokasi kursor ada di baguian yang ada autofocus. dan hanya boleh satu
+required : wajib diisi
+
+Web Storage :
+- Local Storage
+- Session Storage
+- Cookiee
