@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+            /* grid-template-areas: 
+            'header  header header'
+            'sidebar content content'
+            'footer footer footer'; */
+
+
+            /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+
+        /* .header {
+            background-color: saddlebrown;
+            grid-area: header;
+        }
+
+        .sidebar {
+            background-color: dodgerblue;
+            grid-area: sidebar;
+        }
+
+        .content {
+            background-color: firebrick;
+            grid-area: content;
+        }
+
+        .footer {
+            background-color: olivedrab;
+            grid-area: footer;
+        } */
+
+        .my-item {
+            grid-area: 2/2/4/4;
+            background-color: palevioletred;
+
+        }
+
+        /* .my-item { */
+            /* property pada item. berhubungan dengan angka grid line */
+            /* grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4; */
+            /* grid-area : 2/2/4/4 */
+
+            /* span itu nambah x kolom. kalau ini jadinya nambah 2 kolom */
+            /* grid-column-start: 1;
+            grid-column-end: span 2; 
+            grid-row-start: 1;
+            grid-row-end: span 2; */
+
+            /* bisa memberikan nama pada line. */
+            /* grid-column-start: satu;
+            grid-column-end: empat;
+            grid-row-start: baris1;
+            grid-row-end: b4; */
+
+            /* grid-column-start: -1;
+            grid-column-end: -2;
+            grid-row-start: -4;
+            grid-row-end: -1; */
+
+            /* grid-column grid-row -> shorthand*/
+            /* gc : start/end */
+            /* gr : start/end */
+            /* grid-column: 2 / 4;
+            grid-row: 2 / 4; */
+
+        
+
+            /* grid area -> shorthand*/
+            /* grid-area: <name> | <row start> / (column start) / <row end> / <column end>; */
+        /* } */
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="item header">1</div>
+        <div class="item sidebar">2</div>
+        <div class="item content">3</div>
+        <div class="item footer">4</div> -->
+        <!-- <div class="item">5</div>
+        <div class="item">6</div> -->
+        <!-- <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div> -->
+
+
+        <div class="item my-item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <!-- <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        * {
+            /* border: 2px orangered solid; */
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: 130px 130px 130px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            /* ------------------------------------- */
+            /* justify items -> mengatur tiap-tiap items. horizontal */
+            /* nempel kiri */
+            /* justify-items: start; */
+
+            /* tengah */
+            /* justify-items: center; */
+
+            /* menarik item jika tidak memili width, dan ini default */
+            /* justify-items: stretch; */
+
+            /* nempel kanan */
+            /* justify-items: end; */
+            /* ------------------------------------- */
+            
+            /* ------------------------------------- */
+            /* align items -> verikal (atas bawah) */
+            /* tengah */
+            /* align-items: center; */
+
+            /* nempel atas */
+            /* align-items: start; */
+
+            /* menarik item jika tida memiliki height, agar penuh */
+            /* align-items: stretch; */
+
+            /* nempel bawha */
+            /* align-items: end; */
+            /* ------------------------------------- */
+
+            /* ------------------------------------- */
+            /* place items -> shorthand untuk justify dan align. urutannya : <align> <justify> */
+            /* meletkan item di tengah-tengah (melayang di tengah) */
+            /* place-items: center; */
+            /* ------------------------------------- */
+
+            /* ------------------------------------- */
+            /* justify content, bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya */
+
+            /* align content */
+
+            /* place content */
+            /* ------------------------------------- */
+            
+        }
+
+        .items {
+            background-color: seagreen;
+            /* height: 100px; */
+            width: 150px;
+            border: 3px solid black;
+        }
+        
+        .items.i1,
+        .items.i4,
+        .items.i7 {
+            /* width: 130px; */
+            height: 100px;
+        }
+        
+        .items.i2,
+        .items.i5,
+        .items.i8 {
+            /* width: 80px; */
+            height: 50px;
+        }
+        
+        .items.i3,
+        .items.i6,
+        .items.i9 {
+            /* width: 170px; */
+            height: 80px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items i1">1</div>
+        <div class="items i2">2</div>
+        <div class="items i3">3</div>
+        <div class="items i4">4</div>
+        <div class="items i5">5</div>
+        <div class="items i6">6</div>
+        <div class="items i7">7</div>
+        <div class="items i8">8</div>
+        <div class="items i9">9</div>
+    </div>
+</body>
+</html>

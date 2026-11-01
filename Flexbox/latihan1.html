@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container {
+            width: 600px;
+            height: 200px;
+            display: flex;
+            border: 5px solid black;
+            margin: 30px auto;
+            padding: 5px;
+            box-sizing: border-box;
+
+            /* ---------------------------------------- */
+            /* flex direction */
+            /* 1. row (kiri-kanan)(default) */
+            /* flex-direction: row; */
+
+            /* 2. row-reverse (kanan-kiri) */
+            /* flex-direction: row-reverse; */
+
+            /* 3. column (atas-bawah) */
+            /* flex-direction: column; */
+            
+            /* 4. column-reverse (bawah-atas) */
+            /* flex-direction: column-reverse; */
+            /* ---------------------------------------- */
+
+            /* ---------------------------------------- */
+            /* flex wrap */
+            /* 1. nowrap (default) */
+            /* flex-wrap: nowrap; */
+
+            /* 2. wrap (dibawa ke baris baru bila tidak muat) */
+            /* flex-wrap: wrap; */
+
+            /* 3. wrap-reverse (kebalikan dari wrap, item paling akhir dibawa ke baris baru tapi diletakan di awal) */
+            /* flex-wrap: wrap-reverse; */
+            /* ---------------------------------------- */
+
+            /* ---------------------------------------- */
+            /* justify content */
+            /* 1. flex-start (default) */
+            /* justify-content: flex-start; */
+
+            /* 2. flex-end */
+            /* justify-content: flex-end; */
+
+            /* 3. center */
+            /* justify-content: center; */
+
+            /* 4. space-between */
+            /* justify-content: space-between; */
+
+            /* 5. space-around */
+            /* justify-content: space-around; */
+
+            /* 6. space-evenly */
+            /* justify-content: space-evenly; */
+            /* ---------------------------------------- */
+
+            /* ---------------------------------------- */
+            /* align items */
+            /* 1. flex-start (default) */
+            align-items: flex-start;
+
+            /* 2. flex-end */
+            /* align-items: flex-end; */
+
+            /* 3. center */
+            /* align-items: center; */
+
+            /* 4. stretch (default) */
+            /* align-items: stretch; */
+
+            /* 5. baseline (sejajar dengan baseline teks) */
+            /* align-items: baseline; */
+            /* ---------------------------------------- */
+
+            /* ---------------------------------------- */
+            /* align content */
+            /* 1. flex-start (default) */
+            /* align-content: flex-start; */
+
+            /* 2. flex-end */
+            /* align-content: flex-end; */
+
+            /* 3. center */
+            /* align-content: center; */
+
+            /* 4. stretch (default) */
+            /* align-content: stretch; */
+
+            /* 5. space-between */
+            /* align-content: space-between; */
+
+            /* 6. space-around */
+            /* align-content: space-around; */
+            /* ---------------------------------------- */
+        }
+
+        .container div {
+            /* width: 120px;
+            height: 120px; */
+            background-color: palevioletred;
+            font-size: 20px;
+            margin: 5px;
+            flex: 1;
+        }
+
+        .container div.dua {
+            flex: 2;
+            align-self: center;
+        }
+
+        /* .satu {order: 4;}
+        .dua {order: 1;}
+        .tiga {order: 2;}
+        .empat {order: 3;} */
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+        <!-- <div class="lima">5</div> -->
+    </div>
+</body>
+</html>
+
+<!-- Flexbox hanya bisa mengatur satu dimensi -->
+<!-- 
+container -> wadah
+item -> isi dari container 
+main axis -> sumbu utama (sejajar horizontal)
+cross axis -> sumbu silang (sejajar vertikal)
+Main size -> ukuran container pada main axis
+cross size -> ukuran container pada cross axis
+main start -> awal main axis
+main end -> akhir main axis
+cross start -> awal cross axis
+cross end -> akhir cross axis
+
+propert pada container(pembungkus) :
+1. flex direction -> mengatur arah
+2. flex wrap -> mengatur pembungkusan. bila item tidak muat, maka item akan dibungkus ke baris baru
+3. justify content -> mengatur posisi item / jarak antar item pada main axis
+4. align items -> mengatur posisi item / penjajaran pada cross axis
+5. align content -> sama seperti align items, tapi untuk multi baris. bila hanya satu baris, maka tidak berpengaruh. menentukan posisi baris pada cross axis
+
+propert pada item (isi) :
+1. order -> mengatur urutan item
+2. flex grow -> mengatur ukuran item
+3. align self -> mengatur hanya satu element
+
+-->

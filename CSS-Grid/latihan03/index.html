@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        html, body {
+            /* border: 2px orangered solid; */
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+
+        /* tampilan default. tampilan ini untuk ukuran handphone atau kecil */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+                'header header header'
+                'sidebar sidebar sidebar'
+                'content content content'
+                'footer footer footer';
+        }
+
+        .item {
+            background-color: seagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 100px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: palegreen;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: palevioletred;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: powderblue;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: peru;
+        }
+
+        /* rensposive breakpoint */
+        /* tampilan di bawah ini untuk ukuran di atas ukuran handphone */
+        @media screen and (min-width: 576px){
+            .container {
+                grid-template-areas: 
+                    'header header header'
+                    'sidebar content content'
+                    'sidebar content content'
+                    'footer footer footer';
+        }
+        }
+
+        /* .item:nth-child(even) {
+            background-color: salmon;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item content">content</div>
+        <div class="item footer">footer</div>
+        <!-- <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div> -->
+    </div>
+</body>
+</html>

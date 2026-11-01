@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Pink Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">Beauty Pink Shop</h2>
+                <p class="sub-heading">Skincare and Parfum</p>
+            </div>
+            <div class="features feature-1">
+                <h4 class="price">IDR 750K</h4>
+                <p class="item">Parfum Flower</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">IDR 450K</h4>
+                <p class="item">Parfum Gentle</p>
+            </div>
+        </header>
+
+        <nav class="menu">
+
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="brand">
+                <h1>BP Shop</h1>
+            </div>
+            <ul class="menu-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Gallery</a></li>
+            </ul>
+
+        </nav>
+
+        <section class="products">
+            <div class="product">
+                <div class="icon">🧴</div>
+                <h3>Skincare</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sapiente est nulla libero iste voluptatum?</p>
+            </div>
+            <div class="product">
+                <div class="icon">💄</div>
+                <h3>Makeup</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sapiente est nulla libero iste voluptatum?</p>
+            </div>
+            <div class="product">
+                <div class="icon">🌼</div>
+                <h3>Parfume</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sapiente est nulla libero iste voluptatum?</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <img src="img/g1.jpg" alt="">
+            <img src="img/g2.jpg" alt="">
+            <img src="img/g3.jpg" alt="">
+            <img src="img/g1.jpg" alt="">
+            <img src="img/g2.jpg" alt="">
+            <img src="img/g3.jpg" alt="">
+            <img src="img/g1.jpg" alt="">
+            <img src="img/g2.jpg" alt="">
+            <img src="img/g3.jpg" alt="">
+            <img src="img/g1.jpg" alt="">
+        </section>
+
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function(){
+            nav.classList.toggle('slide');
+        });
+    </script>
+
+</body>
+</html>
